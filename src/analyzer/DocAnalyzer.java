@@ -261,8 +261,7 @@ public  HashMap <String, Double>  getTD_IDF( HashMap <String, Integer> oneDocTF 
 			if(title != null){
 				preprocessing(title);
 				numberDocs++;
-			}
-		    
+			}    
 //			preprocessing(atts.getValue("Title"));
 			
 			
@@ -318,7 +317,6 @@ public  HashMap <String, Double>  getTD_IDF( HashMap <String, Integer> oneDocTF 
 			}			
 			
 		}
-		
 		public void endDocument(){
 		
 			
@@ -368,14 +366,12 @@ public  HashMap <String, Double>  getTD_IDF( HashMap <String, Integer> oneDocTF 
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//String filename = "/Users/haoyuchen/GoogleDrive/Text-Mining-Project/Data/stackoverflow.com-Tags/Tags.xml";
-		String filename = "/Users/haoyuchen/GoogleDrive/Text-Mining-Project/Data/stackoverflow.com-Post/FakePost.xml";
+		//String filename = "../Data/stackoverflow.com-Tags/Tags.xml";
+		String filename = "../Data/stackoverflow.com-Post/FakePost.xml";
 
-		
 		DocAnalyzer analyzer = new DocAnalyzer();
 		
-		analyzer.LoadStopwords("/Users/haoyuchen/Dropbox/2015-Spring/Text-Mining/Project/StackExchangeQuestionRCD-VSM/english.stop");
-		
+		analyzer.LoadStopwords("./english.stop");
 		try {
 			analyzer.LoadXML(filename);
 			analyzer.searchSimiarQuestions(filename);
@@ -388,10 +384,6 @@ public  HashMap <String, Double>  getTD_IDF( HashMap <String, Integer> oneDocTF 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
-		
-		
-		
-		
 		
 	}
 
